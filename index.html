@@ -1,0 +1,341 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gauntlet</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+
+<body>
+
+  <article id="game-container">
+
+    <section id="player-setup" class="card card--name">
+      <div class="card__prompt">
+        <div>RECORD YOUR NAME, ADVENTURER</div>
+        </div>
+        <div class="field">
+          <input type="text" autofocus="true" id="player-name" class="field__textinput">
+        </div>
+
+
+      <div  class="card__button">
+        <a id="name-button" class="card__link btn btn--big btn--orange"
+
+           href="#"
+           next="card--class">
+          <span class="btn__prompt"></span>
+          <span class="btn__text">Select class</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="class-select" class="card card--class">
+      <div class="card__prompt">
+        <div>CHOOSE YOUR PATH</div>
+        <div>
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--name">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card__button">
+              <a id="classButton" class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__class">Warrior</span>
+              </a>
+            </div>
+
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__class">Valkyrie</span>
+              </a>
+            </div>
+
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+
+                <span class="btn__prompt"></span>
+                <span class="btn__class">berserker</span>
+
+              </a>
+            </div>
+
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__class">Monk</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="card__button">
+
+              <a class="class__link btn btn--big btn--salmon" href="#">
+                <span class="btn__prompt">></span>
+
+                <span class="btn__class">Wizard</span>
+              </a>
+            </div>
+
+            <div class="card__button">
+
+              <a class="class__link btn btn--big btn--salmon" href="#">
+                <span class="btn__prompt">></span>
+
+                <span class="btn__class">Sorcerer</span>
+              </a>
+            </div>
+
+            <div class="card__button">
+
+              <a class="class__link btn btn--big btn--salmon" href="#">
+                <span class="btn__prompt">></span>
+
+                <span class="btn__class">Conjurer</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card__button">
+
+              <a class="class__link btn btn--big btn--green" href="#">
+                <span class="btn__prompt">></span>
+
+                <span class="btn__class">Thief</span>
+              </a>
+            </div>
+
+            <div class="card__button">
+
+              <a class="class__link btn btn--big btn--green" href="#">
+                <span class="btn__prompt">></span>
+
+                <span class="btn__class">Ninja</span>
+              </a>
+            </div>
+
+            <div class="card__button">
+
+              <a class="class__link btn btn--big btn--green" href="#">
+                <span class="btn__prompt">></span>
+
+                <span class="btn__class">Assassin</span>
+              </a>
+            </div>
+
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--yellow" href="#">
+                <span class="btn__prompt"></span>
+                <span class="btn__text">surprise me</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card__button">
+        <a id="selectWeapon" class="card__link btn btn--big btn--orange"
+           href="#"
+           next="card--weapon">
+          <span class="btn__prompt"></span>
+          <span class="btn__text">Select a Weapon</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="weapon-select" class="card card--weapon">
+      <div class="card__prompt">
+        <div>choose your weapon</div>
+        <div>
+        <a class="card__back btn btn--small"
+             href="#"
+             previous="card--name">
+            <span class="btn__prompt">&lt;</span>
+          <span class="btn__text">Back</span></a>
+        </div>
+          <div class="row">
+          <div class="col-sm-4">
+            <div class="card__prompt">
+              <a class="class__link btn btn--big btn--red" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__weapon">Dagger</span>
+              </a>
+            </div>
+
+            <div class="card__prompt">
+              <a class="class__link btn btn--big btn--red" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__weapon">Broad Sword</span>
+              </a>
+              </div>
+
+            <div class="card__prompt">
+              <a class="class__link btn btn--big btn--red" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__weapon">Lucille</span>
+              </a>
+              </div>
+
+              <div class="card__prompt">
+              <a class="class__link btn btn--big btn--red" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__weapon">Battle Axe</span>
+              </a>
+              </div>
+              </div>
+              </div>
+
+
+
+
+      <div id="battleTime" class="card__button">
+        <a class="card__link btn btn--big btn--orange"
+           href="#"
+           next="card--battleground">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">defeat your enemies</span>
+        </a>
+      </div>
+     </div>
+    </section>
+
+
+
+
+    <!-- Starting battleground -->
+
+    <section id="battleground" class="card card--battleground">
+
+
+
+      <div class="row">
+
+
+
+
+
+
+
+          <h1 id="battlegroundHeader">THE BODACIOUS BATTLEFIELD</h1>
+
+
+
+
+          <div class="col-md-4 battleCards">
+
+
+                <div id="playerInfo" class="row">
+                   <h1>Name:  <span id="playerName"></span></h1>
+                  <ul>
+
+                    <li>Class:<span id="playerClass"></span></li>
+                    <li>Weapon: <span id="playerWeapon"> </span> </li>
+                    <li>Intelligence: <span id="playerIntelligence"> </span></li>
+                    <li> Skin Color:<span id="playerSkinColor"> </span></li>
+                   <!--  <li id="playerSkinColor"> #playerSkinColor</li> -->
+
+                  </ul>
+                </div>
+
+    <!--  health bar-->
+                <div class="progress">
+                    <div id="playerHealth" class="progress-bar progress-bar-danger active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span class="sr-only">Complete</span>
+                    </div>
+                </div>
+          </div>
+
+          <div class="col-md-4 col-md-offset-4 battleCards">
+
+
+                <div id="playerInfo" class="row">
+                      <h1 id="enemyName">#enemyNameMarty</h1>
+                  <ul>
+
+                    <li id="enemyClass">#enemyClass bigBird</li>
+                    <li id="enemyWeapon"> #enemyWeapon Happiness</li>
+
+
+                  </ul>
+                </div>
+
+                <div class="progress">
+                    <div id="enemyHealth" class="progress-bar progress-bar-danger active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span class="sr-only">Complete</span>
+                    </div>
+                </div>
+              </div>
+
+    <!--  health bar-->
+
+
+
+              <!-- <div class="progressShell">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 50%">50%
+                    <span class="sr-only">la;ksdjflkjasdf Complete</span>
+                  </div>
+                </div>
+              </div> -->
+
+
+
+
+
+
+            <div class="row col-md-6 col-md-offset-3">
+
+                  <button type="button" class="btn btn-danger btn-lg btn-block" id="attackButton">ATTACK!!</button>
+
+
+           </div>
+
+
+
+
+    </div>
+
+
+
+
+    </section>
+
+  </article>
+
+
+
+
+
+<!-- ================================================script============================================================ -->
+
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="js/quiz.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/classes.js"></script>
+<script type="text/javascript" src="js/enemies.js"></script>
+<script type="text/javascript" src="js/hithealth.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/weapons.js"></script>
+</body>
+</html>
