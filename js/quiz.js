@@ -1,1 +1,2 @@
-console.log("javscriptworks but spelling doesn't")
+// console.log("javscriptworks but spelling doesn't")
+// //

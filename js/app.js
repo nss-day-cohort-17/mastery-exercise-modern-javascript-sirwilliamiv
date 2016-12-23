@@ -1,23 +1,23 @@
-var objectName =  $('#player-name').val()
-// objectName = new Gauntlet.Combatants.Human();
+// var objectName =  $('#player-name').val()
+// // objectName = new Gauntlet.Combatants.Human();
 
-$("#name-button").click(function(){
+// $("#name-button").click(function(){
 
-  objectName.name =  $('#player-name').val()
-  // objectName.weapon = objectName.WHAT WE CLICK()     $("weaponclicktarget").click(function(){
-  // })
-  objectName.class = $("classClicked").click()
+//   objectName.name =  $('#player-name').val()
+//   // objectName.weapon = objectName.WHAT WE CLICK()     $("weaponclicktarget").click(function(){
+//   // })
+//   objectName.class = $("classClicked").click()
 
- // objectName.setWeapon()
- objectName.generateClass();
+//  // objectName.setWeapon()
+//  objectName.generateClass();
 
- console.log(objectName)
-
-
+//  console.log(objectName)
 
 
-// console.log(Gauntlet.Combatants.Human())
-})
+
+
+// // console.log(Gauntlet.Combatants.Human())
+// })
 
 
 

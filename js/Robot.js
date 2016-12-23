@@ -2,7 +2,6 @@
 
 function Robot () {
     this.type = 'Robot';
-    this.flight = false;
     this.robotName = name || "Bot with no name";
     this.health = Math.floor(Math.random() * 40 + 50);
     this.strength = 90;
@@ -13,41 +12,46 @@ function Drone (name) {
    this.type = 'Drone';
    this.name = name;
    this.flight = true;
+   this.health = this.health - 15;
    this.weapon = "Missles"
+   this.strength = this.strength + 25;
 };
 
 Drone.prototype = new Robot();
-var newDrone = new Drone("Bobby")
-console.log(newDrone.weapon, newDrone.name, newDrone.strength, newDrone.health)
+var frank = new Drone();
+var toby = new Drone();
+// console.log(newDrone.weapon, newDrone.name, newDrone.strength, newDrone.health)
 
 
 function Bipedal (name) {
    this.type = 'Bipedal';
    this.name = name;
-   this.flight = false;
    this.weapon = "Many, Many Slaps to the Face"
+   this.health = this.health + 15;
+   this.strength = this.strength + 30;
+
 };
 
 Bipedal.prototype = new Robot();
 
-var bingo = new Bipedal("Bibbity")
-
-console.log(bingo.name + " will defeat you with " + bingo.weapon + ". Unless, you rip down his health, which is " + bingo.health)
-
+var bingo = new Bipedal();
+var nicholas = new Bipedal();
 
 
 function ATV (name) {
    this.type = 'ATV';
    this.name = name;
-   this.flight = false;
    this.weapon = "Bombs"
+   this.health = this.health - 30;
+   this.strength = this.strength + 50;
 };
 
 ATV.prototype = new Robot();
 
-var activity = new ATV("Arron");
+var activity = new ATV();
+var slider = new ATV();
 
-console.log("this is the ATV: ", activity.name, activity.health)
+// console.log("this is the ATV: ", activity.name, activity.health)
 
 
 
