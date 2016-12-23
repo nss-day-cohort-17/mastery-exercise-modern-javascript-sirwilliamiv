@@ -8,22 +8,27 @@ body {
   font-family: "Lato", "Helvetica", "sans-serif";
   margin: 0;
   padding: 10px;
-  font-size: 3em;
-  background-image: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/09/Fantasy-World-pack1-2.jpg");
+  /*font-size: 1rem;*/
+  background-image: url("images/logo.png");
+  background-size: 30%;
   background-repeat: no-repeat;
 }
+
+/*http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/09/Fantasy-World-pack1-2.jpg*/
 
 .field {
   margin: 10px 0 0 0;
   text-align: center;
-  color: firebrick;
+  color: darkgrey;
+
 }
 
 .field__textinput {
-  font-size: .7em;
-  padding: 10px 10px;
+  font-size: 5.0em;
+  padding: 30px 30px;
   text-align: center;
   min-width: 500px;
+
 }
 
 
@@ -36,16 +41,16 @@ body {
 }
 
 #text {
-  font-size: 1.1em
+  font-size: 5.1em
 }
 
 .card__prompt {
-  font-family: Papyrus, fantasy;
-  font-size: 1.5em;
+  /*font-family: Papyrus, fantasy;*/
+  font-size: 10rem;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: firebrick;
+  color: black;
   text-shadow: #fff 0 0 10px;
 }
 
@@ -105,7 +110,7 @@ body {
 }
 
 .btn--red {
-  border-color: #E4BD00;
+  border-color: white;
   color: white;
   background-color: firebrick;
   text-align: center;
