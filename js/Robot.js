@@ -9,6 +9,9 @@ function Robot () {
 
 // 3 classes of robot = Drone, Bipedal and ATV
 
+
+
+///Drone
 function Drone (name) {
    this.type = 'Drone';
    this.name = name;
@@ -21,9 +24,9 @@ function Drone (name) {
 Drone.prototype = new Robot();
 var Bop = new Drone();
 var Bip = new Drone();
-// console.log(newDrone.weapon, newDrone.name, newDrone.strength, newDrone.health)
 
 
+///Bipedal
 function Bipedal (name) {
    this.type = 'Bipedal';
    this.name = name;
@@ -38,7 +41,7 @@ Bipedal.prototype = new Robot();
 var Tina = new Bipedal();
 var Tim = new Bipedal();
 
-
+///ATV
 function ATV (name) {
    this.type = 'ATV';
    this.name = name;
@@ -51,6 +54,22 @@ ATV.prototype = new Robot();
 
 var Slug = new ATV();
 var Zippy = new ATV();
+
+
+
+
+//====== test capturing user input================
+var one = ""
+var two = ""
+
+$('.btn__text').click(function(){
+  var one = $('#name1').val()
+  var two = $('#name2').val()
+  console.log(one, two)
+  var test = $('#player1>option:selected').text();
+  console.log("I selected:", test)
+
+})
 
 
 
