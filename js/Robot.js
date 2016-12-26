@@ -55,23 +55,48 @@ ATV.prototype = new Robot();
 var Slug = new ATV();
 var Zippy = new ATV();
 
-
-
+//add hover photo preview of what robots look like from select menu
 
 //====== test capturing user input================
 var one = ""
 var two = ""
+var player1Type=""
+var player2Type=""
+
 
 $('.btn__text').click(function(){
+  //text field name assignments
   var one = $('#name1').val()
   var two = $('#name2').val()
   console.log(one, two)
-  var test = $('#player1>option:selected').text();
-  console.log("I selected:", test)
+  //option selection
+  var name1 = $('#player1>option:selected').text();
+  var name2 = $('#player2>option:selected').text();
+  player1Type = name1+'.type'
+  player2Type = name2+'.type'
+console.log(player1Type,player2Type)
+
+// functionwhichsends(one,two,player1Type,player2Type)
 
 })
 
+Tina
 
+// ============================Attack time
+// var player1
+// var player2
+
+// display stats
+//  $('attackbutton').click(function attacking(){
+//   if (health > 0)   {
+//     -take difference of strengths
+//     -subtract difference from lesser strengthed player
+//     send information to html element holding health
+//   } else {
+//     alert(#player has been killed by #player with #weaponName)
+//   }
+
+// })
 
 //.each loops thru each object
 
