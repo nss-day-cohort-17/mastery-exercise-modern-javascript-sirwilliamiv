@@ -63,33 +63,42 @@ $(document).ready(function() {
   // $( "div" ).html( "<span class='red'>Hello <b>Again</b></span>" )
 
   function createPlayersHtml(one, two, Player1Type, Player2Type) {
-      $("#playerInfo1").html(`<h1>Name: ${one} <span id="playerName"></span></h1>
-                   <li>Class:${player1Type.type}<span id="playerClass"></span></li>
-                    <li>Weapon: ${player1Type.weapon} <span id="playerWeapon"> </span> </li>
-                    <li>Health: ${player1Type.health}<span id="playerIntelligence"> </span></li>
-                    <li> Strength: ${player1Type.strength}<span id="playerSkinColor"> </span></li>`
+      $("#playerInfo1").html(`<h1>Bot 1: <span id="playerName"> ${one}</span></h1>
+                   <li>Class:<span id="playerClass">${player1Type.type}</span></li>
+                    <li>Weapon:  <span id="playerWeapon1">${player1Type.weapon} </span> </li>
+                    <li>Health: <span id="playerHealth1">${player1Type.health} </span></li>
+                    <li id="playerStrength1"> Strength: <span> ${player1Type.strength}</span></li>`
                  );
 
-      $("#playerInfo2").html( `<h1>Name: ${two} <span id="playerName"></span></h1>
+      $("#playerInfo2").html( `<h1>Bot 2:  <span id="playerName">${two}</span></h1>
                     <ul>
 
-                    <li>Class:${player2Type.type}<span id="playerClass"></span></li>
-                    <li>Weapon: ${player2Type.weapon} <span id="playerWeapon"> </span> </li>
-                    <li>Health: ${player2Type.health}<span id="playerIntelligence"> </span></li>
-                    <li> Strength: ${player2Type.strength}<span id="playerSkinColor"> </span></li>
+                    <li>Class:<span id="playerClass">${player2Type.type}</span></li>
+                    <li>Weapon: <span id="playerWeapon">  ${player2Type.weapon}</span> </li>
+                    <li>Health: <span id="playerHealth2">${player2Type.health} </span></li>
+                    <li> Strength:<span id="playerStrength2">  ${player2Type.strength}</span></li>
                     </ul>` )
   }
 
-$('attackbutton').click(function fight(player1Type, player2Type){
-  if (health > 0)   {
-    var blow = player1Type.strength - player2Type.strength
-    -subtract difference from lesser strengthed player
-    send information to html element holding health
-  } else {
-    alert(#player has been killed by #player with #weaponName)
+$("#attackButton").click( function () {
+
+    var p1 = $("#playerhealth1").html("")
+    var p2 = $("playerhealth2").html("")
+
+  if (player1Type.health > 0 && player2Type.health > 0)   {
+    var high =(player1Type.strength - player2Type.strength);
+    var low = Math.min(player1Type.strength, player2Type.strength);
+    var loser = high - low
+      p1.html(loser)
+      p2.html()
+    // -subtract difference from lesser strengthed player
+    // send information to html element holding health
   }
+  // else {
+    // alert(#player has been killed by #player with #weaponName)
+
 
 })
-}
+
 
 });

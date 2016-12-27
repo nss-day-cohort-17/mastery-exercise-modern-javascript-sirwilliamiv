@@ -1,5 +1,9 @@
 
 var RoboDome = {}
+var one = ""
+var two = ""
+var player1Type=""
+var player2Type=""
 // Robot prototype
 function Robot () {
     this.type = 'Robot';
@@ -93,10 +97,7 @@ RoboDome.Zippy.prototype = new ATV();
 //add hover photo preview of what robots look like from select menu
 
 //====== test capturing user input================
-var one = ""
-var two = ""
-var player1Type=""
-var player2Type=""
+
 
 
 
