@@ -1,4 +1,5 @@
 
+var RoboDome = {}
 // Robot prototype
 function Robot () {
     this.type = 'Robot';
@@ -16,14 +17,29 @@ function Drone (name) {
    this.type = 'Drone';
    this.name = name;
    this.flight = true;
-   this.health =  Math.floor(Math.random() * 40 + 50) - 15;
-   this.weapon = "Missles"
-   this.strength = this.strength + 25;
+
+   // this.strength = this.strength + 25;
 };
 
 Drone.prototype = new Robot();
-var Bop = new Drone();
-var Bip = new Drone();
+
+
+
+RoboDome.Bop = function(){
+  this.weapon ="Machine Gun";
+  this.health =  Math.floor(Math.random() * 40 + 50) - 15;
+  this.strength = 90;
+
+}
+RoboDome.Bip = function() {
+  this.weapon ="Missles"
+  this.health =  Math.floor(Math.random() * 40 + 50) - 13;
+  this.strength = 97;
+}
+
+RoboDome.Bop.prototype = new Drone();
+RoboDome.Bip.prototype = new Drone();
+// var Bip = new Drone();
 
 
 ///Bipedal
@@ -38,8 +54,8 @@ function Bipedal (name) {
 
 Bipedal.prototype = new Robot();
 
-var Tina = new Bipedal();
-var Tim = new Bipedal();
+var Tina =""
+var Tim=""
 
 ///ATV
 function ATV (name) {
@@ -72,8 +88,9 @@ $('.btn__text').click(function(){
   //option selection
   var name1 = $('#player1>option:selected').text();
   var name2 = $('#player2>option:selected').text();
-  player1Type = name1+'.type'
-  player2Type = name2+'.type'
+  console.log(name1)
+  player1Type = new RoboDome[name1]
+  // player2Type = new ((name2) + ("()"))
 console.log(player1Type,player2Type)
 
 // functionwhichsends(one,two,player1Type,player2Type)
