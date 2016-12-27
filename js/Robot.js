@@ -42,20 +42,32 @@ RoboDome.Bip.prototype = new Drone();
 // var Bip = new Drone();
 
 
+
+
 ///Bipedal
 function Bipedal (name) {
    this.type = 'Bipedal';
    this.name = name;
-   this.weapon = "Many, Many Slaps to the Face"
-   this.health = this.health + 15;
-   this.strength = this.strength + 30;
+
 
 };
 
 Bipedal.prototype = new Robot();
 
-var Tina =""
-var Tim=""
+
+RoboDome.Tina = function() {
+   this.weapon = "Many, Many Slaps to the Face"
+   this.health = this.health + 15;
+   this.strength = this.strength + 30;
+}
+
+RoboDome.Tim = function() {
+  this.weapon = "Sarcasm"
+  this.health = this.health + 14;
+  this.strength = this.strength + 30;
+}
+RoboDome.Tina.prototype = new Bipedal();
+RoboDome.Tim.prototype = new Bipedal();
 
 ///ATV
 function ATV (name) {
