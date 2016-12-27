@@ -5,6 +5,7 @@ function Robot () {
     this.type = 'Robot';
     this.robotName = name || "Bot with no name";
     this.strength = 90;
+    this.health = 85;
 
 };
 
@@ -48,12 +49,8 @@ RoboDome.Bip.prototype = new Drone();
 function Bipedal (name) {
    this.type = 'Bipedal';
    this.name = name;
-
-
 };
-
 Bipedal.prototype = new Robot();
-
 
 RoboDome.Tina = function() {
    this.weapon = "Many, Many Slaps to the Face"
@@ -73,15 +70,25 @@ RoboDome.Tim.prototype = new Bipedal();
 function ATV (name) {
    this.type = 'ATV';
    this.name = name;
-   this.weapon = "Bombs"
-   this.health =  Math.floor(Math.random() * 40 + 50) - 30;
-   this.strength = this.strength + 50;
+
 };
 
 ATV.prototype = new Robot();
 
-var Slug = new ATV();
-var Zippy = new ATV();
+
+RoboDome.Slug = function() {
+    this.weapon = "Bombs"
+    this.health =  Math.floor(Math.random() * 40 + 50) - 20;
+    this.strength = this.strength + 40;
+}
+RoboDome.Zippy = function() {
+    this.weapon = "Electricity"
+    this.health =  Math.floor(Math.random() * 40 + 50) - 23;
+    this.strength = this.strength + 50;
+}
+RoboDome.Slug.prototype = new ATV();
+RoboDome.Zippy.prototype = new ATV();
+
 
 //add hover photo preview of what robots look like from select menu
 
@@ -92,40 +99,16 @@ var player1Type=""
 var player2Type=""
 
 
-$('.btn__text').click(function(){
-  //text field name assignments
-  var one = $('#name1').val()
-  var two = $('#name2').val()
-  console.log(one, two)
-  //option selection
-  var name1 = $('#player1>option:selected').text();
-  var name2 = $('#player2>option:selected').text();
-  console.log(name1)
-  player1Type = new RoboDome[name1]
-  // player2Type = new ((name2) + ("()"))
-console.log(player1Type,player2Type)
 
-// functionwhichsends(one,two,player1Type,player2Type)
 
-})
 
-Tina
 
 // ============================Attack time
 // var player1
 // var player2
 
 // display stats
-//  $('attackbutton').click(function attacking(){
-//   if (health > 0)   {
-//     -take difference of strengths
-//     -subtract difference from lesser strengthed player
-//     send information to html element holding health
-//   } else {
-//     alert(#player has been killed by #player with #weaponName)
-//   }
 
-// })
 
 //.each loops thru each object
 

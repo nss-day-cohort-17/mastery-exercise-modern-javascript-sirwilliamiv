@@ -1,91 +1,3 @@
-// var objectName =  $('#player-name').val()
-// // objectName = new Gauntlet.Combatants.Human();
-
-// $("#name-button").click(function(){
-
-//   objectName.name =  $('#player-name').val()
-//   // objectName.weapon = objectName.WHAT WE CLICK()     $("weaponclicktarget").click(function(){
-//   // })
-//   objectName.class = $("classClicked").click()
-
-//  // objectName.setWeapon()
-//  objectName.generateClass();
-
-//  console.log(objectName)
-
-
-
-
-// // console.log(Gauntlet.Combatants.Human())
-// })
-
-
-
-// console.log(billy)
-
-// billy.
-
-
-
-// This will be used for "Surprise me" option
-// console.log(warrior.toString());
-
-// // var orc = new Gauntlet.Combatants.Orc();
-// orc.generateClass();
-// orc.setWeapon(new BroadSword());
-// // console.log(orc.toString());
-
-
-// gamer character creation
-
-var gamer;
-var gamerName;
-var gamerClass;
-var gamerWeapon;
-var gamerStrength;
-var gamerIntelligence;
-
-// jQuery event listener for name ---> classes
-
-$('#selectClass').click(function() {
-  gamerName = $('#player-name')[0].value
-  console.log('gamerName', gamerName);
-
-  gamer =new Gauntlet.Combatants.Player(gamerName)
-})
-
-// jQuery event listener for classes ---> weapons : halfway resolved
-
-
-$('body').click(function() {
-  var target = $(event.target)
-  gamerClass = target.find('.btn__class').text()
-  // console.log(target)
-  // gamer.class = gamerClass
-  // gamerClass = Gauntlet.GuildHall.$(this)
-  console.log("gamer's class", gamerClass)
-  return;
-
-})
-
-// jQuery event listener for weapons ---> fight
-
-$('body').click(function() {
-  var target = $(event.target)
-  gamerWeapon = target.find('.btn__weapon').text()
-  // console.log(target)
-  // gamer.weapon = gamerWeapon
-  // gamerWeapon = Gauntlet.GuildHall.$(this)
-  console.log("gamer's weapon", gamerWeapon)
-  return;
-
-})
-/*
-  Test code to generate a spell
- */
-// var spell = new Gauntlet.SpellBook.Sphere();
-// console.log("spell: ", spell.toString());
-
 
 $(document).ready(function() {
   /*
@@ -127,5 +39,57 @@ $(document).ready(function() {
     $(".card").hide();
     $("." + previousCard).show();
   });
+
+
+// when button is clicked - user input capture
+  $('.btn__text').click(function(){
+  //text field name assignments
+        var one = $('#name1').val()
+        var two = $('#name2').val()
+
+        //SELECT option selection
+        var name1 = $('#player1>option:selected').text();
+        var name2 = $('#player2>option:selected').text();
+        // console.log(name1)
+        player1Type = new RoboDome[name1]
+        player2Type = new RoboDome[name2]
+
+// console.log(player1Type)
+
+    createPlayersHtml(one, two, player1Type, player2Type)
+    // fight(player1Type, player2Type)
+  })
+
+  // $( "div" ).html( "<span class='red'>Hello <b>Again</b></span>" )
+
+  function createPlayersHtml(one, two, Player1Type, Player2Type) {
+      $("#playerInfo1").html(`<h1>Name: ${one} <span id="playerName"></span></h1>
+                   <li>Class:${player1Type.type}<span id="playerClass"></span></li>
+                    <li>Weapon: ${player1Type.weapon} <span id="playerWeapon"> </span> </li>
+                    <li>Health: ${player1Type.health}<span id="playerIntelligence"> </span></li>
+                    <li> Strength: ${player1Type.strength}<span id="playerSkinColor"> </span></li>`
+                 );
+
+      $("#playerInfo2").html( `<h1>Name: ${two} <span id="playerName"></span></h1>
+                    <ul>
+
+                    <li>Class:${player2Type.type}<span id="playerClass"></span></li>
+                    <li>Weapon: ${player2Type.weapon} <span id="playerWeapon"> </span> </li>
+                    <li>Health: ${player2Type.health}<span id="playerIntelligence"> </span></li>
+                    <li> Strength: ${player2Type.strength}<span id="playerSkinColor"> </span></li>
+                    </ul>` )
+  }
+
+$('attackbutton').click(function fight(player1Type, player2Type){
+  if (health > 0)   {
+    var blow = player1Type.strength - player2Type.strength
+    -subtract difference from lesser strengthed player
+    send information to html element holding health
+  } else {
+    alert(#player has been killed by #player with #weaponName)
+  }
+
+})
+}
 
 });
