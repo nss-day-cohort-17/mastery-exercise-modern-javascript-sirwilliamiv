@@ -64,7 +64,7 @@ $(document).ready(function() {
 
   function createPlayersHtml(one, two, Player1Type, Player2Type) {
       $("#playerInfo1").html(`<h1>Bot 1: <span id="playerName"> ${one}</span></h1>
-                   <li>Class:<span id="playerClass">${player1Type.type}</span></li>
+                   <li>Type: <span id="playerClass">${player1Type.type}</span></li>
                     <li>Weapon:  <span id="playerWeapon1">${player1Type.weapon} </span> </li>
                     <li>Health: <span id="playerHealth1">${player1Type.health} </span></li>
                     <li id="playerStrength1"> Strength: <span> ${player1Type.strength}</span></li>`
@@ -73,7 +73,7 @@ $(document).ready(function() {
       $("#playerInfo2").html( `<h1>Bot 2:  <span id="playerName">${two}</span></h1>
                     <ul>
 
-                    <li>Class:<span id="playerClass">${player2Type.type}</span></li>
+                    <li>Type: <span id="playerClass">${player2Type.type}</span></li>
                     <li>Weapon: <span id="playerWeapon">  ${player2Type.weapon}</span> </li>
                     <li>Health: <span id="playerHealth2">${player2Type.health} </span></li>
                     <li> Strength:<span id="playerStrength2">  ${player2Type.strength}</span></li>
@@ -82,20 +82,22 @@ $(document).ready(function() {
 
 $("#attackButton").click( function () {
 
-    var p1 = $("#playerhealth1").html("")
-    var p2 = $("playerhealth2").html("")
+    var p1 = $("#playerHealth1").text()
+    var p2 = $("#playerHealth2").text()
+    console.log(p1, p2)
 
   if (player1Type.health > 0 && player2Type.health > 0)   {
     var high =(player1Type.strength - player2Type.strength);
     var low = Math.min(player1Type.strength, player2Type.strength);
     var loser = high - low
-      p1.html(loser)
-      p2.html()
+      // p1.html(loser)
+      // p2.html()
     // -subtract difference from lesser strengthed player
     // send information to html element holding health
   }
-  // else {
-    // alert(#player has been killed by #player with #weaponName)
+  else {
+    alert("01011001 01101111 01110101 00100000 01100001 01110010 01100101 00100000 01100100 01100101 01100001 01100100 00101100 00100000 01010010 01101111 01100010 01101111 01110100 00100001 aka: you are dead, robot")
+  }
 
 
 })
