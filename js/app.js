@@ -80,21 +80,21 @@ $(document).ready(function() {
                     </ul>` )
   }
 
+
+
+// ==============ATTACK=========================
 $("#attackButton").click( function () {
-
-    var p1 = $("#playerHealth1").text()
-    var p2 = $("#playerHealth2").text()
-    console.log(p1, p2)
-
   if (player1Type.health > 0 && player2Type.health > 0)   {
-    var high =(player1Type.strength - player2Type.strength);
-    var low = Math.min(player1Type.strength, player2Type.strength);
-    var loser = high - low
-      // p1.html(loser)
-      // p2.html()
-    // -subtract difference from lesser strengthed player
-    // send information to html element holding health
+
+    if(player1Type.strength >=  player2Type.strength) {
+      return $("#playerHealth2").html(player2Type.health - (player1Type.strength - player2Type.strength));
+
+    } else if (player2Type.strength >=  player1Type.strength){
+        return $("#playerHealth1").html(player1Type.health - (player2Type.strength - player1Type.strength));
+      }
+
   }
+
   else {
     alert("01011001 01101111 01110101 00100000 01100001 01110010 01100101 00100000 01100100 01100101 01100001 01100100 00101100 00100000 01010010 01101111 01100010 01101111 01110100 00100001 aka: you are dead, robot")
   }
