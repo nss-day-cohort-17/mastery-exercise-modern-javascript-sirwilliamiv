@@ -54,7 +54,10 @@ $(document).ready(function() {
         player1Type = new RoboDome[name1]
         player2Type = new RoboDome[name2]
 
-// console.log(player1Type)
+        player1Type.name = one
+        player2Type.name = two
+
+
 
     createPlayersHtml(one, two, player1Type, player2Type)
 
@@ -101,7 +104,13 @@ $("#attackButton").click( function () {
   }
 
   else {
-    alert("01011001 01101111 01110101 00100000 01100001 01110010 01100101 00100000 01100100 01100101 01100001 01100100 00101100 00100000 01010010 01101111 01100010 01101111 01110100 00100001 aka: you are dead, robot")
+
+      if(player1Type.health <= 0) {
+    alert(`${player2Type.name} defeated ${player1Type.name} with their weapon of choice, ${player2Type.weapon}`)
+      }
+      else {
+        alert(`${player1Type.name} defeated ${player2Type.name} with their weapon of choice, ${player1Type.weapon}`)
+      }
   }
 
 
