@@ -47,7 +47,7 @@ $(document).ready(function() {
         //SELECT option selection
         var name1 = $('#player1>option:selected').text();
         var name2 = $('#player2>option:selected').text();
-        // console.log(name1)
+        console.log("name1 =",name1)
         player1Type = new RoboDome[name1]
         player2Type = new RoboDome[name2]
 
@@ -81,6 +81,7 @@ $(document).ready(function() {
   }
 
 function setTheHealth(player1Type, player2Type) {
+  console.log("player one health",player1Type)
   $("#playerHealth1").html(player1Type.health)
   $("#playerHealth2").html(player2Type.health)
 
@@ -95,13 +96,13 @@ $("#attackButton").click( function () {
   if(player1Type.damage >=  player2Type.damage) {
       // console.log("player 1 is stronger")
       player2Type.health = player2Type.health - (player1Type.damage - player2Type.damage)- 1
-      player1Type.health = player1Type - (player1Type.damage - player2Type.damage)
+      player1Type.health = player1Type - player2Type.damage;
       setTheHealth(player1Type, player2Type)
 
   } else if (player2Type.damage >=  player1Type.damage){
       // console.log("player2 is stronger")
         player1Type.health = player1Type.health - (player2Type.damage - player1Type.damage)- 1
-        player2Type.health = player2Type.health - (player1Type.damage - player2Type.damage)- 1
+        player2Type.health = player2Type.health - player1Type.damage;
         setTheHealth(player1Type, player2Type)
     }
   }
