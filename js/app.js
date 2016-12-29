@@ -67,7 +67,7 @@ $(document).ready(function() {
                    <li>Type: <span id="playerClass">${player1Type.type}</span></li>
                     <li>Weapon:  <span id="playerWeapon1">${player1Type.weapon} </span> </li>
                     <li>Health: <span id="playerHealth1">${player1Type.health} </span></li>
-                    <li id="playerStrength1"> Strength: <span> ${player1Type.strength}</span></li>`
+                    <li id="playerStrength1"> Strength: <span> ${player1Type.damage}</span></li>`
                  );
 
       $("#playerInfo2").html( `<h1> <span id="playerName">${two}</span></h1>
@@ -76,7 +76,7 @@ $(document).ready(function() {
                     <li>Type: <span id="playerClass">${player2Type.type}</span></li>
                     <li>Weapon: <span id="playerWeapon">  ${player2Type.weapon}</span> </li>
                     <li>Health: <span id="playerHealth2">${player2Type.health} </span></li>
-                    <li> Strength:<span id="playerStrength2">  ${player2Type.strength}</span></li>
+                    <li> Strength:<span id="playerStrength2">  ${player2Type.damage}</span></li>
                     </ul>` )
   }
 
@@ -86,16 +86,16 @@ $(document).ready(function() {
 
 $("#attackButton").click( function () {
   if (player1Type.health > 0 && player2Type.health > 0)   {
-    console.log("health not zero, if")
+    // console.log("health not zero, if")
 
-    if(player1Type.strength >=  player2Type.strength) {
-      console.log("player 1 is stronger")
-      player2Type.health = player2Type.health - (player1Type.strength - player2Type.strength)- 1
+    if(player1Type.damage >=  player2Type.damage) {
+      // console.log("player 1 is stronger")
+      player2Type.health = player2Type.health - (player1Type.damage - player2Type.damage)- 1
       return $("#playerHealth2").html(player2Type.health);
 
-    } else if (player2Type.strength >=  player1Type.strength){
-      console.log("player2 is stronger")
-        player1Type.health = player1Type.health - (player2Type.strength - player1Type.strength)- 1
+    } else if (player2Type.damage >=  player1Type.damage){
+      // console.log("player2 is stronger")
+        player1Type.health = player1Type.health - (player2Type.damage - player1Type.damage)- 1
         return $("#playerHealth1").html(player1Type.health);
       }
   }

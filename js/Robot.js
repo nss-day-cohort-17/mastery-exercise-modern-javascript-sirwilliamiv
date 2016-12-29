@@ -8,7 +8,7 @@ var player2Type=""
 function Robot () {
     this.type = 'Robot';
     this.robotName = name || "Bot with no name";
-    this.strength = 90;
+    this.damage = 90;
     this.health = 85;
 
 };
@@ -33,13 +33,13 @@ Drone.prototype = new Robot();
 RoboDome.Bop = function(){
   this.weapon ="Machine Gun";
   this.health =  Math.floor(Math.random() * 40 + 50) - 15;
-  this.strength = 90;
+  this.damage = 90;
 
 }
 RoboDome.Bip = function() {
   this.weapon ="Missles"
   this.health =  Math.floor(Math.random() * 40 + 50) - 13;
-  this.strength = 97;
+  this.damage = 97;
 }
 
 RoboDome.Bop.prototype = new Drone();
@@ -59,13 +59,13 @@ Bipedal.prototype = new Robot();
 RoboDome.Tina = function() {
    this.weapon = "Many, Many Slaps to the Face"
    this.health = this.health + 15;
-   this.strength = this.strength + 30;
+   this.damage = this.damage + 30;
 }
 
 RoboDome.Tim = function() {
   this.weapon = "Sarcasm"
   this.health = this.health + 14;
-  this.strength = this.strength + 30;
+  this.damage = this.damage + 30;
 }
 RoboDome.Tina.prototype = new Bipedal();
 RoboDome.Tim.prototype = new Bipedal();
@@ -83,12 +83,12 @@ ATV.prototype = new Robot();
 RoboDome.Slug = function() {
     this.weapon = "Bombs"
     this.health =  Math.floor(Math.random() * 40 + 50) - 20;
-    this.strength = this.strength + 40;
+    this.damage = this.damage + 40;
 }
 RoboDome.Zippy = function() {
     this.weapon = "Electricity"
     this.health =  Math.floor(Math.random() * 40 + 50) - 23;
-    this.strength = this.strength + 50;
+    this.damage = this.damage + 50;
 }
 RoboDome.Slug.prototype = new ATV();
 RoboDome.Zippy.prototype = new ATV();
