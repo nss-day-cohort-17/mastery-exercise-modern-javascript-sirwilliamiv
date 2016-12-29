@@ -33,13 +33,13 @@ Drone.prototype = new Robot();
 RoboDome.Bop = function(){
   this.weapon ="Machine Gun";
   this.health =  Math.floor(Math.random() * 40 + 50) - 15;
-  this.damage = 90;
+  this.damage = Math.floor(Math.random() * 45 + 75);
 
 }
 RoboDome.Bip = function() {
   this.weapon ="Missles"
   this.health =  Math.floor(Math.random() * 40 + 50) - 13;
-  this.damage = 97;
+  this.damage = Math.floor(Math.random() * 45 + 65);
 }
 
 RoboDome.Bop.prototype = new Drone();
@@ -59,13 +59,13 @@ Bipedal.prototype = new Robot();
 RoboDome.Tina = function() {
    this.weapon = "Many, Many Slaps to the Face"
    this.health = this.health + 15;
-   this.damage = this.damage + 30;
+   this.damage = Math.floor(Math.random() * 45 + 65)+35;
 }
 
 RoboDome.Tim = function() {
   this.weapon = "Sarcasm"
   this.health = this.health + 14;
-  this.damage = this.damage + 30;
+  this.damage = Math.floor(Math.random() * 45 + 10);
 }
 RoboDome.Tina.prototype = new Bipedal();
 RoboDome.Tim.prototype = new Bipedal();
@@ -83,46 +83,12 @@ ATV.prototype = new Robot();
 RoboDome.Slug = function() {
     this.weapon = "Bombs"
     this.health =  Math.floor(Math.random() * 40 + 50) - 20;
-    this.damage = this.damage + 40;
+    this.damage = Math.floor(Math.random() * 20 + 65) +50;
 }
 RoboDome.Zippy = function() {
     this.weapon = "Electricity"
     this.health =  Math.floor(Math.random() * 40 + 50) - 23;
-    this.damage = this.damage + 50;
+    this.damage = Math.floor(Math.random() * 45 );
 }
 RoboDome.Slug.prototype = new ATV();
 RoboDome.Zippy.prototype = new ATV();
-
-
-//add hover photo preview of what robots look like from select menu
-
-//====== test capturing user input================
-
-
-
-
-
-
-
-// ============================Attack time
-// var player1
-// var player2
-
-// display stats
-
-
-//.each loops thru each object
-
-
-// var atv = $.each(ATV, function( key, value ) {
-//   alert( key + ": " + value );
-// });
-
-// var bip = $.each(Bipedal, function( key, value) {
-//     alert( key+": " + value);
-// });
-// var dro = $.each(Drone, function( key, value) {
-//     alert( key+": " + value);
-// });
-
-// console.log(atv, bip, dro)

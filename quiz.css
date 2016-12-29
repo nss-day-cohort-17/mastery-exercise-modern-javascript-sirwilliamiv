@@ -8,7 +8,7 @@ body {
   font-family: "Lato", "Helvetica", "sans-serif";
   margin: 0;
   padding: 10px;
-  background-image: url("images/logo.png");
+  background-image: url("images/whitedome.png");
   background-size: 100rem;
 
   background-repeat: no-repeat;
@@ -136,5 +136,9 @@ body {
 
 .battleCards >  *, li{
   list-style-type:  none;
+  color: #5a5c51;
+}
+#attackButton {
   color: white;
+  background-color: #5a5c51;
 }
