@@ -80,7 +80,11 @@ $(document).ready(function() {
                     </ul>` )
   }
 
+function setTheHealth(player1Type, player2Type) {
+  $("#playerHealth1").html(player1Type.health)
+  $("#playerHealth2").html(player2Type.health)
 
+}
 
 // ==============ATTACK=========================
 
@@ -88,16 +92,18 @@ $("#attackButton").click( function () {
   if (player1Type.health > 0 && player2Type.health > 0)   {
     // console.log("health not zero, if")
 
-    if(player1Type.damage >=  player2Type.damage) {
+  if(player1Type.damage >=  player2Type.damage) {
       // console.log("player 1 is stronger")
       player2Type.health = player2Type.health - (player1Type.damage - player2Type.damage)- 1
-      return $("#playerHealth2").html(player2Type.health);
+      player1Type.health = player1Type - (player1Type.damage - player2Type.damage)
+      setTheHealth(player1Type, player2Type)
 
-    } else if (player2Type.damage >=  player1Type.damage){
+  } else if (player2Type.damage >=  player1Type.damage){
       // console.log("player2 is stronger")
         player1Type.health = player1Type.health - (player2Type.damage - player1Type.damage)- 1
-        return $("#playerHealth1").html(player1Type.health);
-      }
+        player2Type.health = player2Type.health - (player1Type.damage - player2Type.damage)- 1
+        setTheHealth(player1Type, player2Type)
+    }
   }
 
   else {
