@@ -82,43 +82,51 @@ $(document).ready(function() {
 
 function setTheHealth(player1Type, player2Type) {
   console.log("player one health",player1Type)
+  // youJustDied(player1Type.health, player2Type.health)
+
   $("#playerHealth1").html(player1Type.health)
   $("#playerHealth2").html(player2Type.health)
-
 }
 
+
+function youJustDied() {
+    if(player1Type.health <= 0) {
+    alert(`${player2Type.name} defeated ${player1Type.name} with their weapon of choice, ${player2Type.weapon}`)
+      }
+      else if (player2Type.health <= 0) {
+        alert(`${player1Type.name} defeated ${player2Type.name} with their weapon of choice, ${player1Type.weapon}`)
+      }
+}
+// function showAlert()
 // ==============ATTACK=========================
 
 $("#attackButton").click( function () {
+
   if (player1Type.health > 0 && player2Type.health > 0)   {
     // console.log("health not zero, if")
 
   if(player1Type.damage >=  player2Type.damage) {
       // console.log("player 1 is stronger")
-      player2Type.health = player2Type.health - (player1Type.damage - player2Type.damage)- 1
-      player1Type.health = player1Type - player2Type.damage;
+      player2Type.health = player2Type.health - (player1Type.damage - player2Type.damage)
+      player1Type.health = player1Type.health - player2Type.damage;
+        youJustDied( player2Type.health)
       setTheHealth(player1Type, player2Type)
 
   } else if (player2Type.damage >=  player1Type.damage){
       // console.log("player2 is stronger")
-        player1Type.health = player1Type.health - (player2Type.damage - player1Type.damage)- 1
+        player1Type.health = player1Type.health - (player2Type.damage - player1Type.damage)
         player2Type.health = player2Type.health - player1Type.damage;
+          youJustDied(player1Type.health)
         setTheHealth(player1Type, player2Type)
     }
   }
 
-  else {
-
-      if(player1Type.health <= 0) {
-    alert(`${player2Type.name} defeated ${player1Type.name} with their weapon of choice, ${player2Type.weapon}`)
-      }
-      else {
-        alert(`${player1Type.name} defeated ${player2Type.name} with their weapon of choice, ${player1Type.weapon}`)
-      }
-  }
 
 
-})
 
+
+     // youJustDied(player1Type.health, player2Type.health)
+
+});
 
 });
